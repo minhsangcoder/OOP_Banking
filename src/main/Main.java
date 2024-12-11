@@ -1,4 +1,8 @@
-package src;
+package src.main;
+
+import src.responsive.Bank;
+import src.model.BankAccount;
+import src.service.BankService;
 
 public class Main {
     public static void main(String[] args) {

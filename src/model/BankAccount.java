@@ -1,6 +1,4 @@
-package src;
-
-import java.sql.SQLOutput;
+package src.model;
 
 public class BankAccount {
     private String accountNumber;

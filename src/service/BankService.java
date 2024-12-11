@@ -1,6 +1,8 @@
-package src;
+package src.service;
 
-public class BankService {
+import src.model.BankAccount;
+
+public class BankService implements BankOperations {
 
     public void display (String message) {
         System.out.println(message);
@@ -8,6 +10,7 @@ public class BankService {
 
     final double minLimit = 5000;
 
+    @Override
     public void deposit (BankAccount account, double amount) {
         if (amount <= minLimit) {
             display("Gui Tien That Bai. So Tien Gui Phai Lon Hon 5000.");
@@ -45,7 +48,7 @@ public class BankService {
         display("Giao Dich Thanh Cong.");
     }
 
-    public double checkBalance(BankAccount account) {
+    public double checkBalance (BankAccount account) {
         return account.getBalance();
     }
 

@@ -1,4 +1,4 @@
-package src;
+package src.model;
 
 public class CheckingAccount extends BankAccount {
     public double transactionLimit;
@@ -16,6 +16,7 @@ public class CheckingAccount extends BankAccount {
         System.out.println(message);
     }
 
+    @Override
     public void withdraw (double amount) {
         double tienGoc = getBalance();
         if (getBalance() < minLimit) {

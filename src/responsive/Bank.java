@@ -1,4 +1,6 @@
-package src;
+package src.responsive;
+
+import src.model.BankAccount;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,7 @@ public class Bank {
     }
 
     public Bank() {
+
     }
 
     public Bank(List<BankAccount> accounts) {
@@ -22,7 +25,7 @@ public class Bank {
     }
 
     public void addAccount(BankAccount newAccount) {
-        this.accounts.add(newAccount);
+        accounts.add(newAccount);
     }
 
     public void display(String message) {
@@ -31,7 +34,7 @@ public class Bank {
 
     public BankAccount findAccount(String accountNumber) {
         for (BankAccount bankAccount : accounts) {
-            if (accountNumber == bankAccount.getAccountNumber()) {
+            if (bankAccount.getAccountNumber().equals(accountNumber)) {
                 return bankAccount;
             }
         }
