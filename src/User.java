@@ -8,7 +8,6 @@ public class User {
     private String name;
     private String email;
     private String phoneNumber;
-
     private List<BankAccount> accounts = new ArrayList<>();
 
     public List<BankAccount> getAccount() {
@@ -36,6 +35,7 @@ public class User {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.accounts = new ArrayList<>();
     }
 
     public void addAccount (BankAccount account) {
@@ -48,7 +48,7 @@ public class User {
 
     public void removeAccount(String accountNumber) {
         for (BankAccount bankAccount : accounts) {
-            if (bankAccount.getAccountNumber() == accountNumber) {
+            if (bankAccount.getAccountNumber().equals(accountNumber)) {
                 this.accounts.remove(bankAccount);
                 return;
             }
